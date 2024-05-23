@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Persephone</title>
+ <style> body { margin: 0; padding:0; border: none; }
+{ border:none; left:0px; top:0px; }
+ .level1 { font-size: 50px; font-style: italic; font-weight: bold; color: green; }
+</style>
+<p class="level1">Level 5 :)</p>
+<p class="words">Welcome to the last level of our game. With the desire to be near you, our game will face an unexpected turn. This is a quiz to see which of the Greek gods you resemble the most.</p>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  .question {
+    margin-bottom: 15px;
+  }
+  .options {
+    list-style-type: none;
+    padding: 0;
+  }
+  .options li {
+    margin-bottom: 10px;
+  }
+  .options input[type="radio"] {
+    margin-right: 8px;
+  }
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .results {
+    margin-top: 20px;
+    text-align: center;
+  }
+</style>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			padding: 1rem;
+			background-color: orange;
+		}
+		.quiz {
+			margin-top: 2rem;
+		}
+		.question {
+			margin-bottom: 1rem;
+		}
+		.choices {
+			list-style-type: none;
+			padding: 0;
+		}
+		.choices li {
+			margin-bottom: 5px;
+		}
+		.choices label {
+			display: flex;
+			align-items: center;
+		}
+		.choices input[type="radio"] {
+			margin-right: 8px;
+		}
+		.submit-button {
+			width: 100%;
+			padding: 30px;
+			background-color: #007bff;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.results {
+			margin-top: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="quiz">
+		<div class="container">
+<h1>Which is the Greek god to whom you resemble the most?</h1></div>
+
+		<div id="quiz-container">
+			<div class="question">
+				<h2>1. What is your favorite weapon?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question1" value="A" data-score="10">
+							A. Spear
+						</label>
+					</li>
+					<li>
+						<label>
+	<input type="radio" name="question1" value="B" data-score="20">
+							B. Bow and Arrow
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question1" value="C" data-score="30">
+							C.  Shield<
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question1" value="D" data-score="40">
+							D. Sword
+						</label>
+					</li>
+				</ul>
+			<div class="question">
+				<h2>2. What is your favorite symbol?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question2" value="A" data-score="10">
+							A. Lightning bolt
+						</label>
+					</li>
+					<li>
+						<label>
+	<input type="radio" name="question2" value="B" data-score="20">
+							B. Trident
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question2" value="C" data-score="30">
+							C. Helmet
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question2" value="D" data-score="40">
+							D. Bow and arrow
+						</label>
+					</li>
+				</ul>
+			<div class="question">
+				<h2>2. What is your favorite quote?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question3" value="A" data-score="10">
+							A. "The truth is, everyone is going to hurt you. You just got to find the ones worth suffering for." - Bob Marley
+						</label>
+					</li>
+					<li>
+						<label>
+	<input type="radio" name="question3" value="B" data-score="20">
+							B. "To forget is nothing. To remember is everything." - Mary Sojourner, Bonelight: Ruin and Grace in the New Southwest
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question3" value="C" data-score="30">
+							C."The most precious gift we can offer anyone is our attention."
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question3" value="D" data-score="40">
+							D. "The only way to mend a broken heart is time and graveyard dust."
+						</label>
+					</li>
+				</ul>
+			<div class="question">
+				<h2>4. What is your favorite animal?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question4" value="A" data-score="10">
+							A. Pegasus
+						</label>
+					</li>
+					<li>
+						<label>
+	<input type="radio" name="question4" value="B" data-score="20">
+							B. Cerberus
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question4" value="C" data-score="30">
+							C. kittens
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question4" value="D" data-score="40">
+							D. koala
+						</label>
+					</li>
+				</ul>
+			<div class="question">
+				<h2>5. What is your favorite symbol?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question5" value="A" data-score="10">
+							A. Lightning bolt
+						</label>
+					</li>
+					<li>
+						<label>
+	<input type="radio" name="question5" value="B" data-score="20">
+							B. Trident
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question5" value="C" data-score="30">
+							C. Helmet
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question5" value="D" data-score="40">
+							D. Bow and arrow
+						</label>
+					</li>
+				</ul>
+			</div>
+			<div class="question">
+				<h2>6. What is your favorite myth?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question6" value="A" data-score="10">
+							A. Pandora's Box
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question6" value="B" data-score="20">
+							B. Icarus and Daedalus
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question6" value="C" data-score="30">
+							C. Narcissus and Echo
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question6" value="D" data-score="40">
+							D. Perseus and Medusa
+						</label>
+					</li>
+				</ul>
+			</div>
+			<div class="question">
+				<h2>7. What is your favorite story about love?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question7" value="A" data-score="10">
+							A. Orpheus and Eurydice
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question7" value="B" data-score="20">
+							B. Pyramus and Thisbe
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question7" value="C" data-score="30">
+							C. Hera and Zeus
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question7" value="D" data-score="40">
+							D. Aphrodite and Ares
+						</label>
+					</li>
+				</ul>
+			</div>
+			<div class="question">
+				<h2>8. What is your favorite story about war?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question8" value="A" data-score="10">
+							A. Trojan War
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question8" value="B" data-score="20">
+							B. Battle of Troy
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question8" value="C" data-score="30">
+							C. Battle of Thermopylae
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question8" value="D" data-score="40">
+							D. Battle of Salamis
+						</label>
+					</li>
+				</ul>
+			</div>
+			<div class="question">
+				<h2>9. What is your favorite story about adventure?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question9" value="A" data-score="10">
+							A. Odyssey
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question9" value="B" data-score="20">
+							B. Iliad
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question9" value="C" data-score="30">
+							C. Aeneid
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question9" value="D" data-score="40">
+							D. Argonautica
+						</label>
+					</li>
+				</ul>
+			</div>
+			<div class="question">
+				<h2>10. What is your favorite story about heroes?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question10" value="A" data-score="10">
+							A. Hercules
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question10" value="B" data-score="20">
+							B. Theseus
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question10" value="C" data-score="30">
+							C. Perseus
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question10" value="D" data-score="40">
+							D. Jason
+						</label>
+					</li>
+				</ul>
+			</div>
+	<div class="question">
+				<h2>11. Which God do you wish to be?</h2>
+				<ul class="choices">
+					<li>
+						<label>
+							<input type="radio" name="question11" value="A" data-score="10">
+							A. Zeus
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question11" value="B" data-score="20">
+							B. Artemis
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question11" value="C" data-score="30">
+							C. Apollo
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="question11" value="D" data-score="40">
+							D. Hera
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<button class="submit-button" onclick="calculateScore()">Submit</button>
+		<div class="results" id="results">
+			<h2>Your score is: <span id="score">0</span></h2>
+			<p id="interpretation"></p>
+		</div>
+	</div>
+
+<script>
+    function calculateScore() {
+    const radios = document.querySelectorAll("input[type='radio']:checked");
+    const allQuestions = document.querySelectorAll(".question");
+    let allAnswered = true;
+    let score = 0;
+
+    radios.forEach((radio) => {
+      score += parseInt(radio.dataset.score);
+    });
+
+    allQuestions.forEach((question) => {
+      const inputs = question.querySelectorAll("input[type='radio']");
+      let answered = false;
+
+      inputs.forEach((input) => {
+        if (input.checked) {
+          answered = true;
+        }
+      });
+
+      if (!answered) {
+        question.style.color = "red";
+        allAnswered = false;
+      } else {
+        question.style.color = ""; // Reset to default color
+      }
+    });
+
+    if (allAnswered) {
+      const submitButton = document.querySelector(".submit-button");
+      submitButton.classList.add("enabled");
+      document.getElementById("results").style.display = "block";
+      document.getElementById("score").innerHTML = score;
+
+      if (score >= 0 && score < 150) {
+        document.getElementById("interpretation").innerHTML = "You resemble Zeus the most.";
+      } else if (score >= 150 && score < 250) {
+        document.getElementById("interpretation").innerHTML = "You resemble Artemis the most.";
+      } else if (score >= 250 && score < 370) {
+        document.getElementById("interpretation").innerHTML = "You resemble Apollo the most.";
+      } else if (score >= 370 && score < 400) {
+        document.getElementById("interpretation").innerHTML = "You resemble Hera the most.";
+      } else if (score >= 410 && score < 440) {
+        document.getElementById("interpretation").innerHTML = "Wow, you exceeded all our expectations. You are a real Persephone.";
+      }
+    } else {
+      alert("Please answer all questions before submitting.");
+    }
+  }
+</script>
+
+	<div class="container">
+		<div class="photo-container">
+		</div>
+<div id="forpuzzle">
+<a href="index5.html" target="_blank">	
+<button id="yourRewardButton" class="center-button">Your last Reward</button>
+</div>
+</a>
+<script>
+const yourRewardButton = document.getElementById('yourRewardButton');
+		yourRewardButton.addEventListener('click', () => {
+			alert('You clicked the "Your Reward" button!');
+		});
+
+	</script>
+</body>
+</html>
